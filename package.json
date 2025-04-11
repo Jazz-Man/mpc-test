@@ -8,7 +8,8 @@
 		"mpc-test": "dist/index.js"
 	},
 	"scripts": {
-		"build": "bun build.ts"
+		"build:bun": "bun build --no-clear-screen --compile --production --sourcemap --bytecode ./src/index.ts --outfile ./dist/mpc-test",
+		"build:watch": "bun build:bun -- --watch"
 	},
 	"files": ["dist"],
 	"devDependencies": {
