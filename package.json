@@ -1,0 +1,25 @@
+{
+	"name": "mpc-test",
+	"version": "0.6.2",
+	"description": "MCP server that exercises all the features of the MCP protocol",
+	"module": "src/index.ts",
+	"type": "module",
+	"bin": {
+		"mpc-test": "dist/index.js"
+	},
+	"scripts": {
+		"build": "bun build.ts"
+	},
+	"files": ["dist"],
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	},
+	"dependencies": {
+		"@modelcontextprotocol/sdk": "^1.8.0",
+		"zod": "^3.24.2",
+		"zod-to-json-schema": "^3.24.5"
+	}
+}
