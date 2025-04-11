@@ -1,0 +1,20 @@
+logLevel = "debug"
+telemetry = false
+
+[install]
+exact = true
+optional = true
+dev = true
+peer = true
+auto = "auto"
+saveTextLockfile = true
+
+
+[install.lockfile]
+save = true
+
+
+[run]
+shell = "system"
+bun = true
+silent = true
