@@ -8,12 +8,15 @@
 		"mpc-test": "dist/index.js"
 	},
 	"scripts": {
+		"build": "bun build.ts && shx chmod +x dist/*.js",
+		"build:watch": "bun run --watch --no-clear-screen build.ts",
 		"build:bun": "bun build --no-clear-screen --compile --production --sourcemap --bytecode ./src/index.ts --outfile ./dist/mpc-test",
-		"build:watch": "bun build:bun -- --watch"
+		"build:bun:watch": "bun build:bun -- --watch"
 	},
 	"files": ["dist"],
 	"devDependencies": {
-		"@types/bun": "latest"
+		"@types/bun": "latest",
+		"shx": "0.4.0"
 	},
 	"peerDependencies": {
 		"typescript": "^5"
